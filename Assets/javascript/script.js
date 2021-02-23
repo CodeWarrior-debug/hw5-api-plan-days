@@ -8,57 +8,39 @@
 // THEN the current day is displayed at the top of the calendar
     
     $('#currentDay').text(moment().format('dddd, MMMM Do YYYY'));
+    // $('#currentDay').text(moment(9,'hour').format('H'));
     
 
-// WHEN I scroll down
-// THEN I am presented with timeblocks for standard business hours
+// THEN I am presented with timeblocks for standard business hours//THEN each timeblock is color coded to indicate whether it is in the past, present, or future//// WHEN I click into a timeblock
+// THEN I can enter an event
 
 //stack overflow question 25498082
-
 
 function buildWorkDay() {
     for (i=9 ; i < 19 ; i++){
         
+        var timeTense;
+        var timeHrInterval = parseInt(moment(i,'hour').format('H'));
+        var hourNow=parseInt(moment().format('H'));
+        
+        if (timeHrInterval < hourNow){
+            timeTense='past';
+        } else if (timeHrInterval===hourNow) { 
+            timeTense='present';
+        } else {timeTense='future'};
+
         var timeBlockHtml = '<div class="row time-block" id="' + i + '">' +
         '<div class="hour col-1 p-3">' + moment(i,'hour').format('hh a') + '</div>' +
-        '<textarea class="description" cols="100" rows="3"></textarea>' +
-        '<button class="btn saveBtn col"> <i class="fas fa-unlock-alt"> </i> </button>' +
+        '<textarea class="description '+ timeTense +'" id="' + ('txt'+i) + '"cols="100" rows="3"></textarea>' +
+        '<button class="btn saveBtn col" id="'+ ('save'+i) + '"> <i class="fas fa-unlock-alt"> </i> </button>' +
         '</div>';
+
         $(timeBlockHtml).appendTo('.container');
-        
-        // '<div class="description"></div>' +
-        // '<div class="hour">' + moment(i.toString()).format('hh a')  + '</div>' +
-        // '<div class="time-block" >'+
-        // '<textarea class="future"></textarea>'+
-        // '</div>'+
-        // '<div class="saveBtn"></div>'+
-        // '</div>'+
-        // '</div>';
+        // $(timeBlockHtml).
     }
 }                    
 
 buildWorkDay();
-
-// var today = new Date();
-// var now;
-
-// var test=moment(8);
-// console.log(test);
-
-// now=moment(today)
-
-// moment().format('hA');
-
-// console.log((now).format('hh a'));
-// console.log((now).format('hh a'));
-
-
-//            '<div class="parent">' + 
-//                '<div class="loadimg"></div>' +
-//                '<div class="header"></div>' +
-//                '<div class="msg"></div>' +
-//            '</div>';
-// $(document.body).append(html);
 
 
 //     // Create button
@@ -74,15 +56,6 @@ buildWorkDay();
 //   }
 
 
-
-
-
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-
-
-// WHEN I click into a timeblock
-// THEN I can enter an event
 
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
