@@ -1,89 +1,36 @@
-# 05 Third-Party APIs: Work Day Scheduler
+![Logo](https://github.com/CodeWarrior-debug/hw5-api-plan-days/blob/main/Assets/images/dayplanner%20logo%20(1).jpg?raw=true)
 
-## Your Task
+## hw5-api-plan-days
+> This is a day planner for the few who still have 9-5 jobs! My 5th UNCC web dev bootcamp assignment, it went okay. I overdelivered because I made the HTML dynamic as well (it's churned out by the jQuery). In the process I used lots of jQuery - which is powerful and concise, but takes some work to un-tangle from any Javascript learnt- found how powerful dynamically adding style classes can be, and discovered how important the timing of loading the code to the webpage can be. The assigment was pretty good but I wish that it had been clear from the beginning you didn't have to do everything dynamically (just the style classes had to be applied dynamically). Extra credit is welcome :). 
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Preview
+![Page Preview](https://github.com/CodeWarrior-debug/hw5-api-plan-days/blob/main/Assets/images/Work%20Planner.gif?raw=true)
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+## Development Tasks Performed
+- Wrote approximately 30 lines of jQuery code and 0 lines of HTML code.
+- Loaded textarea contents to local storage w Query and reapplied them on refresh.
+- Handled some Moment.js syntax, wondering if it should stil continue to be used.
+- Worked a lot with variable sensitivity and concatenation in jQuery, still trying to understand more DOM traversal.
+- ...And Many More...
 
-## User Story
+## Contributing
+>I heartily recommend Google Calendar and Asana as much better alternatives, you can send donations to me for recommending Asana!
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+## Links
 
-## Acceptance Criteria
+- View Page (Github Pages link): https://codewarrior-debug.github.io/hw5-api-plan-days/
+- Repository: https://github.com/CodeWarrior-debug/hw5-api-plan-days
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+## Licensing
 
-The following animation demonstrates the application functionality:
+This project's contents are unlicensed.
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+## Comments
 
+Please don't penalize based on dynamically building HTML. Since the context of the acceptance criteria read the webpage will "feature dynamically updated HTML and CSS powered by jQuery," I honestly thought it had to all come from jQuery. By the time I learned otherwise, there was no point in reinventing the wheel.
 
-## Grading Requirements
+## Credits
 
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+- Trilogy Education Services
+- StackOverflow.com, especially the information on question 25498082
+- w3schools.com
